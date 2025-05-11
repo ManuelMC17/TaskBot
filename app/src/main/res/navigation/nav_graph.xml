@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/loginFragment"
-        android:name="com.example.taskbot.LoginFragment"
+        android:name="com.example.taskbot.view.LoginFragment"
         android:label="fragment_registrer"
         tools:layout="@layout/fragment_registrer" >
         <action
@@ -16,7 +16,7 @@
     </fragment>
     <fragment
         android:id="@+id/registrerFragment"
-        android:name="com.example.taskbot.RegistrerFragment"
+        android:name="com.example.taskbot.view.RegistrerFragment"
         android:label="RegistrerFragment" >
         <action
             android:id="@+id/action_registrerFragment_to_loginFragment"
