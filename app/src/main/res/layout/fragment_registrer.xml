@@ -51,8 +51,8 @@
 
             <ImageView
                 android:id="@+id/imageView"
-                android:layout_width="32dp"
-                android:layout_height="32dp"
+                android:layout_width="22dp"
+                android:layout_height="30dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
                 android:scaleType="fitXY"
@@ -79,6 +79,7 @@
                 tools:layout_editor_absoluteX="16dp">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/name"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
 
@@ -95,9 +96,10 @@
                 app:layout_constraintTop_toBottomOf="@id/nombre">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/correito"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:inputType="textPassword" />
+                     />
             </com.google.android.material.textfield.TextInputLayout>
 
 
@@ -113,6 +115,7 @@
                 app:layout_constraintTop_toBottomOf="@id/correo">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/contrasenias"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="textPassword" />
