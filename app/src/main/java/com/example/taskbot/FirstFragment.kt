@@ -6,34 +6,31 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
+import com.example.taskbot.R
 import com.example.taskbot.databinding.FragmentPendientesBinding
+import com.example.taskbot.utils.FragmentCommunicator
+import com.example.taskbot.view.MainActivity
 
-/**
- * A simple [Fragment] subclass as the default destination in the navigation.
- */
+
 class FirstFragment : Fragment() {
 
     private var _binding: FragmentPendientesBinding? = null
-
-    // This property is only valid between onCreateView and
-    // onDestroyView.
     private val binding get() = _binding!!
+    private lateinit var communicator: FragmentCommunicator
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-
+        communicator = requireActivity() as MainActivity
         _binding = FragmentPendientesBinding.inflate(inflater, container, false)
+        setupView()
         return binding.root
-
     }
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-
-        binding.buttonFirst.setOnClickListener {
-            findNavController().navigate(R.id.action_loginFragment_to_firstFragment)
+    private fun setupView(){
+        binding.iconAdd.setOnClickListener {
+            findNavController().navigate(R.id.action_firstFragment_to_secondFragment2)
         }
     }
 
